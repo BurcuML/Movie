@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Dancing+Script:wght@700&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <!-- örneğin navbarı en sağa almak için text-align etiketini kullansak bile işe yaramaz çünkü içeriğin genişliği kadar yer değiştirir text-align. mesela h1 etiketi sayfa genişliğince yer kapladığı için text-align uygularsak genişliğinin en sağına alır. fakat navbar kendi kapsamınca yer kapladığı için uygularsak olduğu yerde kalır. bu yüzden nav etiketine gelip width değerini 100% yaparsak sayfa genişliğince yer kaplayacağından kutu içerisinde bu elemanları hareket ettirebiliriz. fakat 100% verirsek bu durumda da headerla alt alta geliyorlar. bunları yan yana yapmak için bir hesaplama yöntemi var. calc(100% - 70px) örneğin bu şekilde, 100% olarak kaplamasını istediğimiz boyutu veriyoruz ve diğer elemanın boyutunu ondan çıkarıyoruz. bu şekilde yaptığımızda tarayıcının boyutu küçülüp büyüsede kapladığı yer değişmez. -->
+    <header class="main-header">
+        <div class="responsive" id="main-nav">
+            <a href="#" class="main-header__logo">MovieApp</a>
+            <nav class="main-nav">
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a href="#">Filmler</a></li>
+                    <li class="main-nav__item"><a href="#">Diziler</a></li>
+                    <li class="main-nav__item main-nav__item__login"><a href="#" Contact>Login</a></li>
+                    <li class="main-nav__item"><a href="#" onclick="displayMenu()"><i class="fa fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- box-sizing child'ın parent'a sığmasını sağlar. eğer width kullanıyorsak. örneğin padding ve border verdiğmizde dışa taşan kısmı parent sınıfına göre ayarlayıp sığdırır. -->
+    <main id="meyin">
+        <section id="welcome">
+            <div class="box">
+                <h2>Welcome</h2>
+                <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
+            </div>
+        </section>
+        <section id="how-it-works">
+            <div>
+                <h1>How it works?</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil. Lorem ipsum dolor sit. Lorem, ipsum
+                    dolor.</p>
+            </div>
+            <div class="how-it-works__plans">
+                <div class="how-it-works__plan icon-box">
+                    <i class="fa-solid fa-right-to-bracket fa-3x"></i>
+                    <h3>Register</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ea molestiae dolorum,
+                        necessitatibus corporis tempora rerum? Eveniet quae eaque officiis est culpa reiciendis
+                        explicabo non. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="how-it-works__plan icon-box">
+                    <i class="fa-solid fa-list-check fa-3x"></i>
+                    <h3>Choose a Plan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ea molestiae dolorum,
+                        necessitatibus corporis tempora rerum? Eveniet quae eaque officiis est culpa reiciendis
+                        explicabo non. Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="how-it-works__plan icon-box">
+                    <i class="fa-solid fa-video fa-3x"></i>
+                    <h3>Enjoy Movify</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ea molestiae dolorum,
+                        necessitatibus corporis tempora rerum? Eveniet quae eaque officiis est culpa reiciendis
+                        explicabo non. Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </section>
+        <!-- eğer iki divi yan yana alırsak bunlar tarayıcıda da yan yana görünürler fakat alt alta yazarsak alt alta görünürler. bu yüzden yan yana olmalarını istiyorsak eğer divleri yan yana yazmalıyız -->
+        <!-- float özelliği sadece block ve inline-block elemanlarda geçerli olur. inline element için text-align kullanırız -->
+        <section class="features">
+            <div class="features-main">
+                <div class="features__part features__left">
+
+                </div>
+                <div class="features__part features__right">
+                    <h2>Watch all Movies & TV Shows once they get </h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis reiciendis adipisci ad quod
+                        iure! Odit dolore quasi sed esse quas dolorem consequatur tempora eligendi, sunt hic vero,
+                        repellat quod doloremque corrupti qui consectetur aut mollitia et iusto?</p>
+                    <a href="#" class="btn">View Features</a>
+                </div>
+            </div>
+        </section>
+        <section class="plans">
+            <div class="section-title">
+                <h1>Become a Premium Member</h1>
+            </div>
+            <div class="plans-row clearfix">
+
+                <div class="plan">
+                    <div class="inner-plan">
+                        <ul class="plans-col">
+                            <h2>Free</h2>
+                            <h3>0/Month</h3>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Unlimited Movies and TV Shows.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <div>
+                                <button href="" class="btn">Choose Plan</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="plan">
+                    <div class="inner-plan recommended-plan">
+                        <ul class="plans-col">
+                            <h2 class="plan__badge">Recommended</h2>
+                            <h2>Basic</h2>
+                            <h3>9.90$/Month</h3>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Unlimited Movies and TV Shows.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <div>
+                                <button href="" class="btn">Choose Plan</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="plan">
+                    <div class="inner-plan">
+                        <ul class="plans-col">
+                            <h2>Premium</h2>
+                            <h3>19.90$/Month</h3>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Unlimited Movies and TV Shows.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <div>
+                                <button href="" class="btn">Choose Plan</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rates-part">
+            <div class="rates">
+                <div class="rate1 col-3">
+                    <h3>975</h3>
+                    <h4>Movies</h4>
+                </div>
+                <div class="rate2 col-3">
+                    <h3>456</h3>
+                    <h4>TV Shows</h4>
+                </div>
+                <div class="rate3 col-3">
+                    <h3>976</h3>
+                    <h4>Users</h4>
+                </div>
+            </div>
+        </section>
+        <section id="movies">
+            <h2 class="section-title">
+                Latest Movies & TV Shows
+            </h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 card-container">
+                        <div class="card">
+                            <img class="img-fluid card-image" src="images/poster-1.jpeg" alt="">
+                            <div class="card-body">
+                                <h2>Joker</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eaque dignissimos
+                                    natus architecto, culpa saepe.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 card-container">
+                        <div class="card">
+                            <img class="img-fluid card-image" src="images/poster-2.jpeg" alt="">
+                            <div class="card-body">
+                                <h2>Pirates of Caribbean</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis dolorum fugit
+                                    nulla adipisci tenetur!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 card-container">
+                        <div class="card">
+                            <img class="img-fluid card-image" src="images/poster-3.jpeg" alt="">
+                            <div class="card-body">
+                                <h2>Avatar</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi perferendis
+                                    praesentium,
+                                    reprehenderit fugit quis vel?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <ul class="links">
+                        <li>About</li>
+                        <li>Blog</li>
+                        <li>Forum</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fa-brands fa-facebook" style="color: #3b6fc4;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram" style="color: #194b80;"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa-brands fa-square-twitter " style="color: #25bcef;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <a href="#body" class="scroll"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+
+    <script>
+        function displayMenu(){
+            var link = document.getElementsByClassName("main-nav");
+            link.classList.toggle("responsive");
+        }
+    </script>
+
+</body>
+
+</html>

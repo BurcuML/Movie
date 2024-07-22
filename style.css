@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* showcase for the video */
+#welcome {
+    background: linear-gradient(rgba(86, 105, 129, 0.7), rgba(203, 218, 213, 0.5)), url('images/bbb.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+#welcome .box {
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(52, 52, 78, 0.5);
+    width: 60%;
+    padding: 40px;
+    font-size: 20px;
+    color: #cbdad5;
+    border-radius: 10px;
+}
+
+#how-it-works {
+    text-align: center;
+    padding: 10px;
+}
+
+#how-it-works h1 {
+    font-size: 31px;
+    color: #34344e;
+}
+
+.main-header {
+    background-color: #cbdad5;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.main-nav {
+    display: inline-block;
+    width: calc(100% - 103px);
+    /*burada kaplamasını istediğimiz elemanın değerinden diğer elemanın kapladığı alanı çıkarıyoruz */
+    text-align: right;
+}
+
+.main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+.main-header__logo {
+    text-decoration: none;
+    color: #34344e;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #34344e;
+}
+
+.main-nav__item::before {
+
+    color: #34344e;
+    margin-right: 5px;
+}
+
+.main-nav__item a:hover {
+    color: #89a7b1;
+}
+
+.main-nav__item:hover::before {
+    color: #89a7b1;
+}
+
+.main-nav__item:active::before {
+    color: #34344e;
+}
+
+.main-nav__item a:active {
+    color: #566981;
+}
+
+.main-nav__item__login a {
+    color: #34344e;
+    background-color: #89a7b1;
+    padding: 5px 15px;
+    border-radius: 7px;
+}
+
+.main-nav__item__login::before {
+    content: none;
+}
+
+.main-nav__item__login a:hover {
+    color: #89a7b1;
+    border: 2px solid #89a7b1;
+    background-color: #566981;
+}
+
+.main-nav__item:last-child {
+    display: none;
+    font-size: 23px;
+}
+
+@media (max-width: 600px) {
+    .main-nav__item {
+        display: none;
+    }
+
+    .main-nav__item:last-child {
+        display: block;
+    }
+
+    .responsive .main-nav__item {
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .responsive .main-nav__item:last-child {
+        position: absolute;
+        right: 30px;
+        top: 0;
+    }
+
+    .responsive .main-nav {
+        display: block;
+    }
+}
+
+.how-it-works__plan {
+    display: inline-block;
+    width: 30%;
+    padding: 11px;
+    margin: 5px;
+}
+
+.how-it-works__plan h3 {
+    color: #34344e;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.icon-box i {
+    color: #89a7b1;
+}
+
+/* vertical align'ı kullandığımızda alt üst yan yana gelen divler tam olarak birbirinin yanına gelir */
+.features__part {
+    display: inline-block;
+    width: calc(50% - 3px);
+    height: 380px;
+}
+
+.features__right {
+    padding: 45px;
+    vertical-align: top;
+    background-color: #cbdad5;
+}
+
+.features__right h2 {
+    font-size: 30px;
+}
+
+.features__img {
+    width: 100%;
+}
+
+.features__left {
+    background: url(images/r.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #89a7b1;
+    padding: 10px;
+    border-radius: 5px;
+    color: #cbdad5;
+    display: inline-block;
+    margin-top: 15px;
+
+}
+
+.btn:hover {
+    background-color: #cbdad5;
+    color: #89a7b1;
+    border: 2px solid #89a7b1;
+    box-shadow: 0 0 1em .25em #89a7b1,
+        0 0 4em 2em #cbdad5,
+        inset 0 0 .75em .25em #89a7b1;
+}
+
+.section-title {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.plan {
+    text-align: center;
+    padding: 5px;
+    width: 33.3%;
+    float: left;
+    color: #34344e;
+}
+
+.plans {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.inner-plan {
+    background: #cbdad5;
+    padding: 25px 15px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
+    transition: box-shadow .3s;
+}
+
+.inner-plan:hover {
+    box-shadow: rgba(0, 0, 0, 0.90) 0px 3px 8px;
+}
+
+/* margine bu değerleri verdiğimizde sağdan soldan eşit boşluklar bırak demiş oluyoruz. float değerini kaldırırsak eğer divler tekrar alt alta sıralanıyor. */
+.plans-row {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.plans-col {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+}
+
+.plans-col li {
+    margin: 7px 0;
+}
+
+.plan__badge {
+    background: #fff;
+    color: #34344e;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+.recommended-plan {
+    background: #566981;
+    color: #cbdad5;
+    position: relative;
+    top: -40px;
+}
+
+/* position:relative de elemanı dört köşeden de konumlandırabiliyoruz. dikkat etmemiz gerekn bu özellikte konum o andaki konumdan itibaren hareket ettirilir. elemana position:absolute özelliğini verdiğimiz anda eleman normal akış içerisinden çıkar. örneğin üç divden ikincisine bu özelliği verirsen ikinci div üçün üzerine biner. */
+.scroll {
+    background-color: #566981;
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    padding: 6px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #cbdad5;
+}
+
+.rates {
+    padding-top: 30px;
+}
+
+.rates-part {
+    text-align: center;
+    background-color: #cbdad5;
+    height: 150px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.col-2 {
+    float: left;
+    width: 50%;
+}
+
+.col-3 {
+    float: left;
+    width: 33.3%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 10px 10px 40px rgba(52, 58, 64, 0.3);
+    /* position: relative;
+  top:0; */
+    transition: transform .3s;
+}
+
+.card:hover {
+    /* top: -11px; alternatif olarak transform ile yapıldı aşağıda görüldüğü gibi */
+    transform: translateY(-11px);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.row {
+    margin-top: 40px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.img-fluid {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-container {
+    padding: 10px;
+}
+
+.card-image {
+    max-height: 350px;
+}
+
+footer {
+    padding: 30px;
+    margin-top: 30px;
+    background-color: #566981;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 5px;
+}
