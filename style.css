@@ -389,3 +389,26 @@ footer ul li {
     display: inline-block;
     margin-left: 5px;
 }
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.links {
+    text-align: left;
+}
+
+.social-media {
+    text-align: right;
+}
+
+.fa-brands {
+    padding: 10px;
+    font-size: 25px;
+    box-shadow: 10px 10px 20px #3a4757;
+    border-radius: 50%;
+}
+
+.fa-brands:hover {
+    opacity: .5;
+}
