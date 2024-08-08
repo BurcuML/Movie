@@ -256,8 +256,6 @@ body {
 .inner-plan:hover {
     box-shadow: rgba(0, 0, 0, 0.90) 0px 3px 8px;
 }
-
-/* margine bu değerleri verdiğimizde sağdan soldan eşit boşluklar bırak demiş oluyoruz. float değerini kaldırırsak eğer divler tekrar alt alta sıralanıyor. */
 .plans-row {
     margin: 0 auto;
     width: 100%;
@@ -289,7 +287,6 @@ body {
     top: -40px;
 }
 
-/* position:relative de elemanı dört köşeden de konumlandırabiliyoruz. dikkat etmemiz gerekn bu özellikte konum o andaki konumdan itibaren hareket ettirilir. elemana position:absolute özelliğini verdiğimiz anda eleman normal akış içerisinden çıkar. örneğin üç divden ikincisine bu özelliği verirsen ikinci div üçün üzerine biner. */
 .scroll {
     background-color: #566981;
     position: fixed;
